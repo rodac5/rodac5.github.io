@@ -5,7 +5,11 @@
       "@id" : "http://ontology.com#connectsTo",
       "@type" : "@id"
     },
-    "name" : {
+     "ip" : {
+      "@id" : "http://ontology.com#ip",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+   "name" : {
       "@id" : "http://ontology.com#name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
