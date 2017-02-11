@@ -1,25 +1,25 @@
 {
   "@context" : {
     "mydata": "http://mydata.com#",
-    "s1-connections" : {
+    "connectsTo" : {
       "@id" : "http://ontology.com#connectsTo",
       "@type" : "@id"
     },
-     "s1-ip" : {
+     "ip" : {
       "@id" : "http://ontology.com#ip",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-   "s1-name" : {
+   "name" : {
       "@id" : "http://ontology.com#name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "s1-file" : {
+    "File" : {
       "@id" : "http://ontology.com#File"
     },
-    "s1-server" : {
+    "WebServer" : {
       "@id" : "http://ontology.com#WebServer"
     },
-    "s1-payload" : {
+    "PayloadFile" : {
       "@id" : "http://ontology.com#PayloadFile"
     }
   }
