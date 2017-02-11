@@ -1,0 +1,21 @@
+{
+  "@context" : {
+    "connectsTo" : {
+      "@id" : "http://ontology.com#connectsTo",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://ontology.com#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "File" : {
+      "@id" : "http://ontology.com#File"
+    },
+    "WebServer" : {
+      "@id" : "http://ontology.com#WebServer"
+    },
+    "PayloadFile" : {
+      "@id" : "http://ontology.com#PayloadFile"
+    }
+  }
+}
