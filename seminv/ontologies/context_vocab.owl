@@ -1,0 +1,7 @@
+{"@context": {
+  "@vocab":"https://raw.githubusercontent.com/rodac5/rodac5.github.io/master/seminv/ontologies/context.owl",
+  "s1-file": "File",
+  "s1-server": "WebServer",
+  "s1-name": "name",
+  "s1-ip": "ip",
+  "s1-connections":"connectsTo"}
