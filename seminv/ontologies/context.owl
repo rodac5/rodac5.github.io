@@ -1,5 +1,6 @@
 {
   "@context" : {
+    "mydata": "http://mydata.com#",
     "connectsTo" : {
       "@id" : "http://ontology.com#connectsTo",
       "@type" : "@id"
