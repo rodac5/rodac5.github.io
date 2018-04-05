@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#"
+     xml:base="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#connectsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#connectsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#PayloadFile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#distributes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#distributes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#embeds -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#embeds">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#PayloadFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#hasJSS-0.9-with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#hasJSS-0.9-with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#hasJSS-1.0-with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#hasJSS-1.0-with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#asCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#asCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#compression -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#compression">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#cve -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#cve">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#domain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#domain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#embedPayload -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#embedPayload">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#familyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#familyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#PayloadFile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#ip -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#ip">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/vtinv#md5 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#md5">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#ExploitFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#PayloadFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#PayloadFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/untitled-ontology-891#WebServer"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
