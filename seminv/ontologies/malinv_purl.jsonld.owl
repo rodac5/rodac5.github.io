@@ -1,49 +1,523 @@
-{
-  "@context": {
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "td": "http://iot.linkeddata.es/def/wot#",
-    "Thing": "td:Thing",
-    "name": "td:name",
-    "base": {
-      "@id": "td:baseURI",
-      "@type": "@id"
-    },
-    "Link": "td:Link",
-    "href": {
-      "@id": "td:href",
-      "@type": "@id"
-    },
-    "mediaType": {
-      "@id": "td:hasMediaType"
-    },
-    "Interaction": "td:Interaction",
-    "interaction": {
-      "@id": "td:providesInteractionPattern",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "link": {
-      "@id": "td:isAccessibleThrough",
-      "@type": "@id"
-    },
-    "security": "td:implementsSecurity",
-    "Property": "td:Property",
-    "required": {
-      "@id": "td:isRequired",
-      "@type": "xsd:boolean"
-    },
-    "writable": {
-      "@id": "td:isWritable",
-      "@type": "xsd:boolean"
-    },
-    "Event": "td:Event",
-    "Action": "td:Action",
-    "inputData": {
-      "@id": "td:hasInputData"
-    },
-    "outputData": {
-      "@id": "td:hasOutputData"
-    },
-    "child": "td:isChildOf"
-  }
-}
+<?xml version="1.0"?>
+<rdf:RDF 
+     xmlns:tentaculos="http://www.semanticweb.org/tentaculos#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tentaculos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#agencia_local -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#agencia_local">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Agencia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Logradouro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#boleto_veiculo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#boleto_veiculo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#existenteEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#existenteEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#localizadoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#localizadoEm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poBoleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poBoleto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#PagBoleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poCedente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poCedente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poConex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poConex">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#ProBan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Conexao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poContaBenef -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poContaBenef">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transferencia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#ContaBenef"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poContaVitima -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poContaVitima">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#ContaVitima"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poConvenio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poConvenio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Convenio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poProBan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poProBan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#ProBan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poProvedor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poProvedor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#IP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poSacado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poSacado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#poVeiculo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#poVeiculo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#possuiTel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#possuiTel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Telefone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#propVeiculo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#propVeiculo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#regiaoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#regiaoDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#tel_estado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#tel_estado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Telefone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Estado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#titularConta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#titularConta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#abrEstado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#abrEstado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Estado"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#anoFab -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#anoFab">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#codAgencia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#codAgencia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Agencia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#codBanco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#codBanco">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Banco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#codConta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#codConta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#cpf_cnpj -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#cpf_cnpj">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#dataConex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#dataConex">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conexao"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#dataConta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#dataConta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#dataProBan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#dataProBan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#ProBan"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#dataTrans -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#dataTrans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#placa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#placa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#renavam -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#renavam">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#tipoConta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#tipoConta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#tipoPessoa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#tipoPessoa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#tipoTrans -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#tipoTrans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#valor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#valor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Agencia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Agencia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Banco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Banco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Boleto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Boleto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Cidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Cidade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Conexao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Conexao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Conta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Conta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#ContaBenef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#ContaBenef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#ContaVitima -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#ContaVitima">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Convenio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Convenio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#CredPrePago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#CredPrePago">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#DadosBancarios -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Estado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Estado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#IDMaq -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#IDMaq">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Conexao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#IP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#IP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Conexao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Local -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Local"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Logradouro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Logradouro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#PagBoleto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#PagBoleto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#ProBan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#ProBan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Telefone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Telefone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Transacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Transacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Transferencia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Transferencia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tentaculos#Transacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#Veiculo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tentaculos#Veiculo"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
