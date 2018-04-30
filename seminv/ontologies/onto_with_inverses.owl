@@ -25,6 +25,7 @@
     <!-- http://www.semanticweb.org/tentaculos#agencia__local -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#agencia__local">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#local__agencia"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Agencia"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Logradouro"/>
     </owl:ObjectProperty>
@@ -34,8 +35,17 @@
     <!-- http://www.semanticweb.org/tentaculos#boleto__convenio -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#boleto__convenio">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#convenio__boleto"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Convenio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#boleto__pagBoleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#boleto__pagBoleto">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#pagBoleto__boleto"/>
     </owl:ObjectProperty>
     
 
@@ -43,6 +53,7 @@
     <!-- http://www.semanticweb.org/tentaculos#boleto__pessoa -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#boleto__pessoa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#pessoa__boleto"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
     </owl:ObjectProperty>
@@ -52,8 +63,41 @@
     <!-- http://www.semanticweb.org/tentaculos#boleto__veiculo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#boleto__veiculo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#veiculo__boleto"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Boleto"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#conexao__proban -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#conexao__proban">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#proban__conexao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#conta-benef__transferencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#conta-benef__transferencia">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#transferencia__conta-benef"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#conta-vitima__transacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#conta-vitima__transacao">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#transacao__conta-vitima"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#conta__pessoa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#conta__pessoa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#pessoa__conta"/>
     </owl:ObjectProperty>
     
 
@@ -61,15 +105,23 @@
     <!-- http://www.semanticweb.org/tentaculos#conta__telefone -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#conta__telefone">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#telefone__conta"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Telefone"/>
     </owl:ObjectProperty>
     
 
 
+    <!-- http://www.semanticweb.org/tentaculos#convenio__boleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#convenio__boleto"/>
+    
+
+
     <!-- http://www.semanticweb.org/tentaculos#dadosBanc__dadosBanco -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#dadosBanc__dadosBanco">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#dadosBanco__dadosBanc"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#DadosBancarios"/>
@@ -77,9 +129,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/tentaculos#dadosBanco__dadosBanc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#dadosBanco__dadosBanc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#estado__telefone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#estado__telefone">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#telefone__estado"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/tentaculos#ip__pessoa -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#ip__pessoa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#pessoa__ip"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#IP"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
     </owl:ObjectProperty>
@@ -89,9 +156,30 @@
     <!-- http://www.semanticweb.org/tentaculos#loc__local -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#loc__local">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#local__loc"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#local__agencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#local__agencia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#local__loc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#local__loc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#local__pessoa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#local__pessoa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#pessoa__local"/>
     </owl:ObjectProperty>
     
 
@@ -105,12 +193,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/tentaculos#pessoa__boleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#pessoa__boleto"/>
+    
+
+
     <!-- http://www.semanticweb.org/tentaculos#pessoa__conta -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#pessoa__conta">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Conta"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#pessoa__ip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#pessoa__ip"/>
     
 
 
@@ -126,6 +226,7 @@
     <!-- http://www.semanticweb.org/tentaculos#pessoa__veiculo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#pessoa__veiculo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#veiculo__pessoa"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Veiculo"/>
     </owl:ObjectProperty>
@@ -138,6 +239,20 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#ProBan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#Conexao"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#proban__transacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#proban__transacao">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tentaculos#transacao__proban"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#telefone__conta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#telefone__conta"/>
     
 
 
@@ -174,6 +289,18 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Transferencia"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tentaculos#ContaBenef"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#veiculo__boleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#veiculo__boleto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tentaculos#veiculo__pessoa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tentaculos#veiculo__pessoa"/>
     
 
 
