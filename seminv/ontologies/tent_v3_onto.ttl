@@ -1,0 +1,559 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tentaculos: <http://www.semanticweb.org/tentaculos#> .
+
+<http://www.semanticweb.org/tentaculos> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/tentaculos#agencia__banco
+tentaculos:agencia__banco rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:banco__agencia ;
+                          rdfs:domain tentaculos:Agencia ;
+                          rdfs:range tentaculos:Banco .
+
+
+###  http://www.semanticweb.org/tentaculos#agencia__conta
+tentaculos:agencia__conta rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:conta__agencia .
+
+
+###  http://www.semanticweb.org/tentaculos#agencia__local
+tentaculos:agencia__local rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:local__agencia ;
+                          rdfs:domain tentaculos:Agencia ;
+                          rdfs:range tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#banco__agencia
+tentaculos:banco__agencia rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#benef__boleto
+tentaculos:benef__boleto rdf:type owl:ObjectProperty ;
+                         owl:inverseOf tentaculos:boleto__benef .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto__benef
+tentaculos:boleto__benef rdf:type owl:ObjectProperty ;
+                         rdfs:domain tentaculos:Boleto ;
+                         rdfs:range tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto__convenio
+tentaculos:boleto__convenio rdf:type owl:ObjectProperty ;
+                            owl:inverseOf tentaculos:convenio__boleto ;
+                            rdfs:domain tentaculos:Boleto ;
+                            rdfs:range tentaculos:Convenio .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto__pagBoleto
+tentaculos:boleto__pagBoleto rdf:type owl:ObjectProperty ;
+                             owl:inverseOf tentaculos:pagBoleto__boleto .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto__sacado
+tentaculos:boleto__sacado rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:sacado__boleto ;
+                          rdfs:domain tentaculos:Boleto ;
+                          rdfs:range tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto__veiculo
+tentaculos:boleto__veiculo rdf:type owl:ObjectProperty ;
+                           owl:inverseOf tentaculos:veiculo__boleto ;
+                           rdfs:domain tentaculos:Boleto ;
+                           rdfs:range tentaculos:Veiculo .
+
+
+###  http://www.semanticweb.org/tentaculos#cidade__estado
+tentaculos:cidade__estado rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:estado__cidade ;
+                          rdfs:domain tentaculos:Cidade ;
+                          rdfs:range tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#cidade__local
+tentaculos:cidade__local rdf:type owl:ObjectProperty ;
+                         owl:inverseOf tentaculos:local__cidade .
+
+
+###  http://www.semanticweb.org/tentaculos#conexao__proban
+tentaculos:conexao__proban rdf:type owl:ObjectProperty ;
+                           owl:inverseOf tentaculos:proban__conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#conta-benef__transferencia
+tentaculos:conta-benef__transferencia rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf tentaculos:transferencia__conta-benef .
+
+
+###  http://www.semanticweb.org/tentaculos#conta-vitima__transacao
+tentaculos:conta-vitima__transacao rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf tentaculos:transacao__conta-vitima .
+
+
+###  http://www.semanticweb.org/tentaculos#conta__agencia
+tentaculos:conta__agencia rdf:type owl:ObjectProperty ;
+                          rdfs:domain tentaculos:Conta ;
+                          rdfs:range tentaculos:Agencia .
+
+
+###  http://www.semanticweb.org/tentaculos#conta__pessoa
+tentaculos:conta__pessoa rdf:type owl:ObjectProperty ;
+                         owl:inverseOf tentaculos:pessoa__conta .
+
+
+###  http://www.semanticweb.org/tentaculos#conta__telefone
+tentaculos:conta__telefone rdf:type owl:ObjectProperty ;
+                           owl:inverseOf tentaculos:telefone__conta ;
+                           rdfs:domain tentaculos:Conta ;
+                           rdfs:range tentaculos:Telefone .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio__boleto
+tentaculos:convenio__boleto rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio__estado
+tentaculos:convenio__estado rdf:type owl:ObjectProperty ;
+                            owl:inverseOf tentaculos:estado__convenio ;
+                            rdfs:domain tentaculos:Convenio ;
+                            rdfs:range tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#cred-pre-pago__telefone
+tentaculos:cred-pre-pago__telefone rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf tentaculos:telefone__cred-pre-pago ;
+                                   rdfs:domain tentaculos:CredPrePago ;
+                                   rdfs:range tentaculos:Telefone .
+
+
+###  http://www.semanticweb.org/tentaculos#estado__cidade
+tentaculos:estado__cidade rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#estado__convenio
+tentaculos:estado__convenio rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#estado__pessoa
+tentaculos:estado__pessoa rdf:type owl:ObjectProperty ;
+                          owl:inverseOf tentaculos:pessoa__estado .
+
+
+###  http://www.semanticweb.org/tentaculos#estado__telefone
+tentaculos:estado__telefone rdf:type owl:ObjectProperty ;
+                            owl:inverseOf tentaculos:telefone__estado .
+
+
+###  http://www.semanticweb.org/tentaculos#ip__provedor
+tentaculos:ip__provedor rdf:type owl:ObjectProperty ;
+                        owl:inverseOf tentaculos:provedor__ip ;
+                        rdfs:domain tentaculos:IP ;
+                        rdfs:range tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#local__agencia
+tentaculos:local__agencia rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#local__cidade
+tentaculos:local__cidade rdf:type owl:ObjectProperty ;
+                         rdfs:domain tentaculos:Local ;
+                         rdfs:range tentaculos:Cidade .
+
+
+###  http://www.semanticweb.org/tentaculos#local__pessoa
+tentaculos:local__pessoa rdf:type owl:ObjectProperty ;
+                         owl:inverseOf tentaculos:pessoa__local .
+
+
+###  http://www.semanticweb.org/tentaculos#pagBoleto__boleto
+tentaculos:pagBoleto__boleto rdf:type owl:ObjectProperty ;
+                             rdfs:domain tentaculos:PagBoleto ;
+                             rdfs:range tentaculos:Boleto .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa__conta
+tentaculos:pessoa__conta rdf:type owl:ObjectProperty ;
+                         rdfs:domain tentaculos:Pessoa ;
+                         rdfs:range tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa__estado
+tentaculos:pessoa__estado rdf:type owl:ObjectProperty ;
+                          rdfs:domain tentaculos:Pessoa ;
+                          rdfs:range tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa__local
+tentaculos:pessoa__local rdf:type owl:ObjectProperty ;
+                         rdfs:domain tentaculos:Pessoa ;
+                         rdfs:range tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa__veiculo
+tentaculos:pessoa__veiculo rdf:type owl:ObjectProperty ;
+                           owl:inverseOf tentaculos:veiculo__pessoa ;
+                           rdfs:domain tentaculos:Pessoa ;
+                           rdfs:range tentaculos:Veiculo .
+
+
+###  http://www.semanticweb.org/tentaculos#proban__conexao
+tentaculos:proban__conexao rdf:type owl:ObjectProperty ;
+                           rdfs:domain tentaculos:ProBan ;
+                           rdfs:range tentaculos:Conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#proban__transacao
+tentaculos:proban__transacao rdf:type owl:ObjectProperty ;
+                             owl:inverseOf tentaculos:transacao__proban .
+
+
+###  http://www.semanticweb.org/tentaculos#provedor__ip
+tentaculos:provedor__ip rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#sacado__boleto
+tentaculos:sacado__boleto rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#telefone__conta
+tentaculos:telefone__conta rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#telefone__cred-pre-pago
+tentaculos:telefone__cred-pre-pago rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#telefone__estado
+tentaculos:telefone__estado rdf:type owl:ObjectProperty ;
+                            rdfs:domain tentaculos:Telefone ;
+                            rdfs:range tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#transacao__conta-vitima
+tentaculos:transacao__conta-vitima rdf:type owl:ObjectProperty ;
+                                   rdfs:domain tentaculos:Transacao ;
+                                   rdfs:range tentaculos:ContaVitima .
+
+
+###  http://www.semanticweb.org/tentaculos#transacao__proban
+tentaculos:transacao__proban rdf:type owl:ObjectProperty ;
+                             rdfs:domain tentaculos:Transacao ;
+                             rdfs:range tentaculos:ProBan .
+
+
+###  http://www.semanticweb.org/tentaculos#transferencia__conta-benef
+tentaculos:transferencia__conta-benef rdf:type owl:ObjectProperty ;
+                                      rdfs:domain tentaculos:Transferencia ;
+                                      rdfs:range tentaculos:ContaBenef .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo__boleto
+tentaculos:veiculo__boleto rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo__pessoa
+tentaculos:veiculo__pessoa rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/tentaculos#agencia_nome
+tentaculos:agencia_nome rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Agencia .
+
+
+###  http://www.semanticweb.org/tentaculos#agencia_numero
+tentaculos:agencia_numero rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tentaculos:Agencia .
+
+
+###  http://www.semanticweb.org/tentaculos#banco_nome
+tentaculos:banco_nome rdf:type owl:DatatypeProperty ;
+                      rdfs:domain tentaculos:Banco .
+
+
+###  http://www.semanticweb.org/tentaculos#banco_numero
+tentaculos:banco_numero rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Banco .
+
+
+###  http://www.semanticweb.org/tentaculos#boleto_numero
+tentaculos:boleto_numero rdf:type owl:DatatypeProperty ;
+                         rdfs:domain tentaculos:Boleto .
+
+
+###  http://www.semanticweb.org/tentaculos#cidade_nome
+tentaculos:cidade_nome rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:Cidade .
+
+
+###  http://www.semanticweb.org/tentaculos#conexao_data
+tentaculos:conexao_data rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#conexao_id
+tentaculos:conexao_id rdf:type owl:DatatypeProperty ;
+                      rdfs:domain tentaculos:Conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#conta_data
+tentaculos:conta_data rdf:type owl:DatatypeProperty ;
+                      rdfs:domain tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#conta_dv
+tentaculos:conta_dv rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#conta_numero
+tentaculos:conta_numero rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#conta_tipo
+tentaculos:conta_tipo rdf:type owl:DatatypeProperty ;
+                      rdfs:domain tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio_PV_detentor
+tentaculos:convenio_PV_detentor rdf:type owl:DatatypeProperty ;
+                                rdfs:domain tentaculos:Convenio .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio_cgc
+tentaculos:convenio_cgc rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Convenio .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio_codigo
+tentaculos:convenio_codigo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio_codigo_SR
+tentaculos:convenio_codigo_SR rdf:type owl:DatatypeProperty ;
+                              rdfs:domain tentaculos:Convenio .
+
+
+###  http://www.semanticweb.org/tentaculos#convenio_nome
+tentaculos:convenio_nome rdf:type owl:DatatypeProperty ;
+                         rdfs:domain tentaculos:Convenio .
+
+
+###  http://www.semanticweb.org/tentaculos#estado_nome
+tentaculos:estado_nome rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#estado_sigla
+tentaculos:estado_sigla rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Estado .
+
+
+###  http://www.semanticweb.org/tentaculos#local_bairro
+tentaculos:local_bairro rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#local_cep
+tentaculos:local_cep rdf:type owl:DatatypeProperty ;
+                     rdfs:domain tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#local_complemento
+tentaculos:local_complemento rdf:type owl:DatatypeProperty ;
+                             rdfs:domain tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#local_logradrouro
+tentaculos:local_logradrouro rdf:type owl:DatatypeProperty ;
+                             rdfs:domain tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#local_numero
+tentaculos:local_numero rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tentaculos:Local .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa_cpf-cnpj
+tentaculos:pessoa_cpf-cnpj rdf:type owl:DatatypeProperty ;
+                           rdfs:domain tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa_nome
+tentaculos:pessoa_nome rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#pessoa_tipo
+tentaculos:pessoa_tipo rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:Pessoa .
+
+
+###  http://www.semanticweb.org/tentaculos#proBan_data
+tentaculos:proBan_data rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:ProBan .
+
+
+###  http://www.semanticweb.org/tentaculos#proBan_numero
+tentaculos:proBan_numero rdf:type owl:DatatypeProperty ;
+                         rdfs:domain tentaculos:ProBan .
+
+
+###  http://www.semanticweb.org/tentaculos#tel_conta_data
+tentaculos:tel_conta_data rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tentaculos:Telefone .
+
+
+###  http://www.semanticweb.org/tentaculos#telefone_data
+tentaculos:telefone_data rdf:type owl:DatatypeProperty ;
+                         rdfs:domain tentaculos:Telefone .
+
+
+###  http://www.semanticweb.org/tentaculos#telefone_numero
+tentaculos:telefone_numero rdf:type owl:DatatypeProperty ;
+                           rdfs:domain tentaculos:Telefone .
+
+
+###  http://www.semanticweb.org/tentaculos#transacao_data
+tentaculos:transacao_data rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#transacao_tipo
+tentaculos:transacao_tipo rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#transacao_valor
+tentaculos:transacao_valor rdf:type owl:DatatypeProperty ;
+                           rdfs:domain tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo_ano
+tentaculos:veiculo_ano rdf:type owl:DatatypeProperty ;
+                       rdfs:domain tentaculos:Veiculo .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo_modelo
+tentaculos:veiculo_modelo rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tentaculos:Veiculo .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo_placa
+tentaculos:veiculo_placa rdf:type owl:DatatypeProperty ;
+                         rdfs:domain tentaculos:Veiculo .
+
+
+###  http://www.semanticweb.org/tentaculos#veiculo_renavam
+tentaculos:veiculo_renavam rdf:type owl:DatatypeProperty ;
+                           rdfs:domain tentaculos:Veiculo .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/tentaculos#Agencia
+tentaculos:Agencia rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Banco
+tentaculos:Banco rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Boleto
+tentaculos:Boleto rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Cidade
+tentaculos:Cidade rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Conexao
+tentaculos:Conexao rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Conta
+tentaculos:Conta rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#ContaBenef
+tentaculos:ContaBenef rdf:type owl:Class ;
+                      rdfs:subClassOf tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#ContaVitima
+tentaculos:ContaVitima rdf:type owl:Class ;
+                       rdfs:subClassOf tentaculos:Conta .
+
+
+###  http://www.semanticweb.org/tentaculos#Convenio
+tentaculos:Convenio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#CredPrePago
+tentaculos:CredPrePago rdf:type owl:Class ;
+                       rdfs:subClassOf tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#Estado
+tentaculos:Estado rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#IDMaq
+tentaculos:IDMaq rdf:type owl:Class ;
+                 rdfs:subClassOf tentaculos:Conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#IP
+tentaculos:IP rdf:type owl:Class ;
+              rdfs:subClassOf tentaculos:Conexao .
+
+
+###  http://www.semanticweb.org/tentaculos#Local
+tentaculos:Local rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#PagBoleto
+tentaculos:PagBoleto rdf:type owl:Class ;
+                     rdfs:subClassOf tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#Pessoa
+tentaculos:Pessoa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#ProBan
+tentaculos:ProBan rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Telefone
+tentaculos:Telefone rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Transacao
+tentaculos:Transacao rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tentaculos#Transferencia
+tentaculos:Transferencia rdf:type owl:Class ;
+                         rdfs:subClassOf tentaculos:Transacao .
+
+
+###  http://www.semanticweb.org/tentaculos#Veiculo
+tentaculos:Veiculo rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
