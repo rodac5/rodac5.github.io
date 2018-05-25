@@ -134,8 +134,8 @@
     <!-- http://www.semanticweb.org/vtinv#hasJSS-0.9-with -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vtinv#hasJSS-0.9-with">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vtinv#File"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vtinv#File"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vtinv#ExploitFile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vtinv#ExploitFile"/>
     </owl:ObjectProperty>
     
 
@@ -143,8 +143,8 @@
     <!-- http://www.semanticweb.org/vtinv#hasJSS-1.0-with -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vtinv#hasJSS-1.0-with">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vtinv#File"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vtinv#File"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vtinv#ExploitFile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vtinv#ExploitFile"/>
     </owl:ObjectProperty>
     
 
