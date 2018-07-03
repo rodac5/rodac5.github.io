@@ -545,6 +545,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/tentaculos#cpf_cnpj -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#cpf_cnpj">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/tentaculos#estado_nome -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#estado_nome">
@@ -597,14 +605,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#local_numero">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Local"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/tentaculos#pessoa_cpf-cnpj -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#pessoa_cpf-cnpj">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
     </owl:DatatypeProperty>
     
 
