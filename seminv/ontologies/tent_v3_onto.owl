@@ -641,6 +641,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/tentaculos#status_cpf -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#status_cpf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tentaculos#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/tentaculos#tel_conta_data -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tentaculos#tel_conta_data">
