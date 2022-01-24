@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#WebServer">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#File">
+  </owl:Class>
+
+  <owl:Ontology rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv">
+  </owl:Ontology>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#asCount">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#compression">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#connectsTo">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#WebServer"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#createDate">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#cve">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#distributes">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#WebServer"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#domain">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#WebServer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#embeddedPayload">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#embeds">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#evilClassName">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#familyName">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#ip">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#WebServer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#lastModifDate">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#md5">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/admin/ontologies/vtinv#sha256">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/admin/ontologies/vtinv#File"/>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>
