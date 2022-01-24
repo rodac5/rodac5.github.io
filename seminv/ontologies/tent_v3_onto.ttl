@@ -381,7 +381,7 @@ tentaculos:local_logradrouro rdf:type owl:DatatypeProperty ;
                              rdfs:domain tentaculos:Local .
 
 
-###  http://www.semanticweb.org/tentaculos#local_numero
+###  http://www.semanticweb.org/tentaculos#local_ umero
 tentaculos:local_numero rdf:type owl:DatatypeProperty ;
                         rdfs:domain tentaculos:Local .
 

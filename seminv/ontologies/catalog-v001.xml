@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="http://purl.org/malinv" uri="malinv_purl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="duplicate:http://www.semanticweb.org/tentaculos" uri="onto_with_inverses.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="duplicate:http://www.semanticweb.org/tentaculos" uri="tent_v3_onto.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="duplicate:http://www.semanticweb.org/vtinv" uri="vtinv_no_inverse.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="duplicate:http://www.semanticweb.org/vtinv" uri="vtinv_inv.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="https://w3id.org/seminv/ontologies/demo.owl" uri="demo.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1530664379602" name="https://w3id.org/seminv/ontologies/demo.owl#" uri="demo.owl"/>
+    </group>
+</catalog>
