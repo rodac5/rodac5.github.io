@@ -6,3 +6,6 @@ username=<user>
 password=<password>
 domain=<domain>
 
+## Montar encase
+ewfmount image.E01 ./rawimage
+mount ./rawimage/ewf1 ./mountpoint -o ro,loop,show_sys_files,streams_interace=windows,offset=$((<part_beginning>*512)) 
