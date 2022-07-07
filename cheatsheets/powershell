@@ -1,3 +1,12 @@
  ls env:\
   $env:path -split ";"
-  
+$env:Path = "SomeRandomPath";             (replaces existing path) 
+$env:Path += ";SomeRandomPath"            (appends to existing path)
+
+$profile                                     
+$profile.AllUsersAllHosts           
+$profile.AllUsersCurrentHost        
+$profile.CurrentUserAllHosts    
+$profile.CurrentUserCurrentHost   
+
+notepad $profile
