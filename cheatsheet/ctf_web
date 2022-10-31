@@ -1,0 +1,1 @@
+nmap ftp - *nmap -sV -sC <target>* - https://nmap.org/nsedoc/scripts/ftp-anon.html
