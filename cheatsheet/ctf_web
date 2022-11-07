@@ -1,3 +1,4 @@
 nmap ftp - *nmap -sV -sC <target>* - https://nmap.org/nsedoc/scripts/ftp-anon.html
 Aggresive scan on specific ports - nmap -T4 -Pn -n -A -p 21,80 10.10.11.186
 Wordpress - wpscan --url metapress.htb -e at,ap --plugins-detection mixed 
+mariadb: mysql -u root -h 10.129.169.125
